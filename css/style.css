@@ -62,6 +62,61 @@ body {
     font-weight: bold;
   }
   
+  /*NAV*/
+  /* Default nav (desktop) */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #3b4443;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Burger icon */
+  .burger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .burger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #3b4443;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
 
 
   .hero {
@@ -250,6 +305,25 @@ body {
     color: white;
   }
   
+
+  .btn-reversed {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid white; /* dark grey border */
+    background-color: #2e3433;
+    color: white; /* dark grey text */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .btn-reversed:hover {
+    background-color: white; /* dark grey background */
+    color: #2e3433;
+    border: 2px solid #2e3433; /* dark grey border */
+
+  }
   
   /* Bottom footer bar */
   .footer-bar {
@@ -275,6 +349,7 @@ body {
     text-decoration: underline;
   }
   
+
 
 
 
@@ -468,6 +543,30 @@ body {
     height: 2px;
     background-color: #ccc;
   }
+
+
+  @media (max-width: 768px) {
+    .services-grid {
+      padding-top: 100px; /* Enough space to clear the header */
+      min-height: auto;   /* Remove the forced 100vh */
+    }
+  
+    .grid-container {
+      padding: 20px; /* Slightly tighter spacing for small screens */
+      gap: 40px;
+    }
+  
+    .service-item img {
+      max-width: 100%; /* Prevent any overflow on small devices */
+    }
+  
+    .services-heading {
+      font-size: 1.8rem; /* Adjust heading size for mobile */
+    }
+  }
+  
+
+
 
   /* Top grey bar with page heading */
 .treatment-header-bar {
@@ -770,13 +869,98 @@ body {
     color: white;
   }
   
-  /* Optional: stack columns on small screens */
   @media (max-width: 768px) {
-    .contact-locations,
-    .contact-map,
-    .contact-form,
-    .contact-details {
-      flex: 1 1 100%;
+    /* Keep locations and map side by side */
+    .contact-row:first-of-type {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    /* Locations panel (left side) */
+    .contact-row:first-of-type .contact-locations {
+      flex: 1;
+      min-width: 48%;
+      padding: 0;
+    }
+  
+    .contact-row:first-of-type .contact-locations ul {
+      margin: 0;
+      padding-left: 8px;
+    }
+  
+    .contact-row:first-of-type .contact-locations li {
+      font-size: 0.7rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+  
+    .contact-row:first-of-type .icon-location {
+      font-size: 0.85rem;
+      margin-right: 4px;
+    }
+  
+    /* Map panel (right side) */
+    .contact-row:first-of-type .contact-map {
+      flex: 1;
+      min-width: 48%;
+    }
+  
+    .contact-map iframe {
+      height: 200px;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      border-radius: 6px;
+      display: block;
+    }
+  
+    /* Optional: Hide horizontal scrollbars for cleaner look */
+    .contact-grid::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .contact-grid {
+      -ms-overflow-style: none;  /* IE & Edge */
+      scrollbar-width: none;     /* Firefox */
     }
   }
+  
+  
+    /* ===== Mobile layout for footer (only screens <= 600px) ===== */
+    @media (max-width: 600px) {
+        .footer-columns {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between; /* Spread evenly */
+          padding: 20px 20px; /* Add space to page edges */
+          gap: 1px;
+        }
+      
+        .footer-col {
+          flex: 1 1 calc(50% - 5px); /* 2 columns with gap accounted for */
+          box-sizing: border-box;
+        }
+      
+        .footer-action {
+          flex: 1 1 100%;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          margin-top: 10px;
+        }
+      
+        .footer-action .btn-outline {
+          margin-top: 10px;
+        }
+      
+        .footer-bar {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 10px;
+        }
+      }
+      
   

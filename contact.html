@@ -7,17 +7,23 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="reviews.html">Patient Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="site-header">
+        <div class="nav-container">
+          <div class="logo">Dr John Smith</div>
+      
+          <!-- Burger icon -->
+          <button class="burger" id="burger">&#9776;</button>
+      
+          <!-- Navigation links -->
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="Reviews.html">Patient Reviews</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
 
   <main>
     <header class="contact-header">
@@ -92,7 +98,7 @@
         <div class="contact-details">
           <p><strong>Practice Telephone:</strong> <a href="tel:+441234567800">01234 567 800</a></p>
           <p><strong>Practice Email:</strong> <a href="mailto:hello@practice.com">hello@practice.com</a></p>
-          <button class="btn-reverse">Call Now</button>
+          <button class="btn-reversed">Call Now</button>
         </div>
       </div>
   
@@ -131,5 +137,6 @@
           <p>Web Design by You - <a href="#">YourName.dev</a></p>
         </div>
       </footer>
+      <script src="script.js"></script>
 </body>
 </html>
