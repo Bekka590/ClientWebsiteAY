@@ -964,3 +964,46 @@ body {
       }
       
   
+
+
+      /*DARK MODE OVERRIDE*/
+      /* This ensures your default "dark" theme works even in dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #2e3433;
+      color: white;
+    }
+  
+    .site-header,
+    .site-footer {
+      background-color: #2e3433;
+      color: white;
+    }
+  
+    .footer-bar {
+      background-color: #111;
+    }
+  
+    a {
+      color: #ccc;
+    }
+  
+    a:hover {
+      color: #fff;
+    }
+  
+    input,
+    textarea {
+      background-color: white;
+      color: #2e3433;
+      border: 1px solid #ccc;
+    }
+  
+    button,
+    .btn-outline,
+    .btn-reverse {
+      background-color: white;
+      color: #2e3433;
+    }
+  }
+  
