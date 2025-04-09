@@ -42,6 +42,13 @@ body {
     margin-top: auto;
   }
   
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+
   header {
     background-color: #3b4443;
     padding: 20px;
@@ -448,7 +455,7 @@ body {
   /* SERVICES PAGE STYLES */
   .services-grid {
     display: flex;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     min-height: 100vh;
     width: 100%;
@@ -458,13 +465,44 @@ body {
   
   
   .grid-container {
-    max-width: 1400px; /* was 1200px */
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* was 280px */
-    gap: 80px; /* was 40px */
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    gap: 60px;
     justify-items: center;
-    padding: 30px; /* add some breathing space around */
+    padding: 30px;
+  }
+  
+  /* Medium screens: 2 columns */
+  @media (max-width: 769px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 20px;
+    }
+  }
+
+  
+  /* Small screens: 1 column */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 40px;
+    }
+  
+    .services-grid {
+      padding-top: 100px;
+      min-height: auto;
+    }
+  
+    .services-heading {
+      font-size: 1.8rem;
+    }
+  
+    .service-item img {
+      max-width: 100%;
+    }
   }
   
   
@@ -544,27 +582,6 @@ body {
     background-color: #ccc;
   }
 
-
-  @media (max-width: 768px) {
-    .services-grid {
-      padding-top: 100px; /* Enough space to clear the header */
-      min-height: auto;   /* Remove the forced 100vh */
-    }
-  
-    .grid-container {
-      padding: 20px; /* Slightly tighter spacing for small screens */
-      gap: 40px;
-    }
-  
-    .service-item img {
-      max-width: 100%; /* Prevent any overflow on small devices */
-    }
-  
-    .services-heading {
-      font-size: 1.8rem; /* Adjust heading size for mobile */
-    }
-  }
-  
 
 
 
