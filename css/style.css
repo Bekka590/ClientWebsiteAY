@@ -1,13 +1,49 @@
 /* style.css */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #fdfdfd;
     color: #333;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+  }
+
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+/* Generic page container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  
+  
+  .site-footer {
+    margin-top: auto;
   }
   
   header {
-    background-color: #002b5c;
+    background-color: #3b4443;
     padding: 20px;
   }
   
@@ -26,17 +62,721 @@ body {
     font-weight: bold;
   }
   
+
+
   .hero {
-    padding: 100px 20px;
+    height: 100vh; /* full screen height */
+    background-image: url('../img/DRland.jpg'); /* adjust path if needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: #cce5ff;
   }
   
-  footer {
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* dark overlay */
+    padding: 40px;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .about-brief {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .about-brief h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #002b5c;
+  }
+  
+  .about-brief h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .about-brief p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .about-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-link {
     background-color: #002b5c;
     color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-link:hover {
+    background-color: #004080;
+  }
+
+  /* FOOTER */
+.site-footer {
+    background-color: #3b4443;
+    color: white;
+    font-size: 0.95rem;
+    padding-top: 40px;
+  }
+  
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 40px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  
+  .footer-col:first-child {
+    text-align: left;
+  }
+  
+  .footer-col {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+/* SHORT underline for Treatments */
+.footer-heading-underline {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  
+  .footer-heading-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 120px; /* You can tweak this width */
+    height: 2px;
+    background-color: #aaa;
+  }
+
+  /* FULL-width underline for review heading */
+.underline-full {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aaa;
     text-align: center;
+  }
+  
+   
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-col ul li {
+    margin: 8px 0;
+  }
+  
+  .footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-col ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-outline {
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-outline:hover {
+    background: white;
+    color: #3b4443;
+  }
+
+  .featured-review .reviewer-details {
+    margin-bottom: 30px;
+  }
+  
+  
+
+  /* Reversed button style */
+.btn-reverse {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid #2e3433; /* dark grey border */
+    background-color: white;
+    color: #2e3433; /* dark grey text */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .btn-reverse:hover {
+    background-color: #2e3433; /* dark grey background */
+    color: white;
+  }
+  
+  
+  /* Bottom footer bar */
+  .footer-bar {
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    font-size: 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .footer-bar a {
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  .footer-bar a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+
+  /*ABOUT PAGE*/
+
+  /* ABOUT PAGE STYLES */
+  .about-hero-split {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .about-left-image {
+    flex: 1;
+    background-image: url('../img/DRport.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+  }
+
+  .about-left-image,
+.about-right-bio {
+  height: 100vh;
+}
+  
+  .about-right-bio {
+    flex: 1;
+    background-color: #3b4443;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    min-height: 100%;
+  }
+  
+  .bio-content {
+    color: white;
+    max-width: 600px;
+  }
+  
+  .bio-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .bio-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ddd;
+  }
+  
+  .about-bio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-bio p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ddd;
+  }
+  
+  /* EDUCATION / EXPERIENCE SECTION */
+  .about-details {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+  }
+  
+  .about-split {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .about-edu, .about-exp {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-edu h3, .about-exp h3 {
+    color: #002b5c;
+    margin-bottom: 20px;
+  }
+  
+  .about-edu p, .about-exp p {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+
+
+
+  /* SERVICES PAGE STYLES */
+  .services-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #2e3433;
+    padding-top: 5px; /* new */
+  }
+  
+  
+  .grid-container {
+    max-width: 1400px; /* was 1200px */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* was 280px */
+    gap: 80px; /* was 40px */
+    justify-items: center;
+    padding: 30px; /* add some breathing space around */
+  }
+  
+  
+
+  
+  .service-item {
+    text-align: center;
+    color: white;
+    padding: 10px;
+  }
+  
+  .service-item img {
+    width: 100%;
+    max-width: 360px; /* was 300px */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* slightly reduced to tighten titles */
+  }
+  
+  
+  .service-item a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    
+  }
+  
+  .service-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .service-item .underline {
+    width: 60px;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
+
+  .service-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .services-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .services-heading {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 3px;
+  }
+  
+  .services-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: #ccc;
+  }
+
+  /* Top grey bar with page heading */
+.treatment-header-bar {
+    background-color: #2e3433;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .treatment-header-bar h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  /* Generic section styling */
+  .treatment-section {
+    max-width: none;
+    width: 100%;
+    margin: 60px 0;
+    padding: 0 80px; /* You can adjust this */
+    color: #333;
+    text-align: left;
+  }
+  
+
+  .centered {
+    text-align: center;
+  }
+  
+  
+  .treatment-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #002b5c;
+  }
+  
+  .treatment-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .treatment-list {
+    list-style-type: disc;
+    padding-left: 40px;
+    line-height: 1.6;
+  }
+  
+/* Split section layout fix */
+.split-section {
+    background-color: white;
+    padding: 60px 20px;
+  }
+  
+  .split-inner {
+    display: flex;
+    flex-wrap: nowrap; /* Change this! */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  
+  .split-inner.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .split-image,
+  .split-text {
+    flex: 1 1 50%;
+    min-width: 400px; /* increase minimum width */
+  }
+  
+  
+  .split-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+  }
+    
+  @media (max-width: 768px) {
+    .split-inner {
+      flex-wrap: wrap;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .split-image,
+    .split-text {
+      flex: 1 1 100%;
+      min-width: 100%;
+    }
+  }
+  
+
+  /*REVIEWS PAGE*/
+  /* REVIEWS PAGE STYLING */
+.reviews-header {
+    background-color: #2e3433;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .featured-review {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .featured-review .star-rating {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .featured-review p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .featured-review .reviewer-details {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+ 
+  /* Main Reviews Grid */
+  .reviews-section {
+    background-color: white;
+    padding: 60px 20px;
+  }
+  
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  
+  .review-card {
+    background-color: white;
     padding: 20px;
-    margin-top: 40px;
+    border-radius: 8px;
+    color: #2e3433;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .review-card .star-rating {
+    font-size: 1.2rem;
+    color: #f5c518; /* Gold stars */
+    margin-bottom: 10px;
+  }
+  
+  .review-card .review-text {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .review-card .reviewer-details {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .review-card .underline {
+    width: 60px;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 10px;
+  }
+  
+  .star-rating {
+    color: #555 !important; /* Dark grey, and !important to override previous gold/yellow if needed */
+  }
+  
+
+/* === CONTACT SECTION LAYOUT === */
+
+.contact-header {
+    background-color: #2e3433;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+  }
+
+.contact-grid.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Split into top and bottom halves */
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  /* Half-width layout for locations/map and form/details */
+  .contact-locations,
+  .contact-map,
+  .contact-form,
+  .contact-details {
+    flex: 1 1 48%;
+  }
+  
+  /* === LOCATION LIST === */
+  .contact-locations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-locations li {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  .icon-location {
+    color: #666;
+    margin-right: 6px;
+  }
+  
+  /* === MAP STYLING === */
+  .contact-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    border-radius: 8px;
+  }
+  
+  /* === CONTACT FORM === */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  /* Reuse button styling */
+  .contact-form button {
+    background-color: white;
+    color: #2e3433;
+    border: 2px solid #2e3433;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 0;
+    width: fit-content;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #2e3433;
+    color: white;
+  }
+  
+  /* === PRACTICE CONTACT INFO === */
+  .contact-details p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  
+  .contact-details .btn-reverse {
+    background-color: white;
+    color: #2e3433;
+    border: 2px solid #2e3433;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-details .btn-reverse:hover {
+    background-color: #2e3433;
+    color: white;
+  }
+  
+  /* Optional: stack columns on small screens */
+  @media (max-width: 768px) {
+    .contact-locations,
+    .contact-map,
+    .contact-form,
+    .contact-details {
+      flex: 1 1 100%;
+    }
   }
   

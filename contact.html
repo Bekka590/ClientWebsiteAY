@@ -20,28 +20,116 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Welcome to Our Practice</h1>
-      <p>Expert, caring, and personalised consultation services.</p>
-    </section>
-    <section>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-            <label for="name">Name:</label><br />
-            <input type="text" name="name" required /><br /><br />
-        
-            <label for="email">Email:</label><br />
-            <input type="email" name="email" required /><br /><br />
-        
-            <label for="message">Message:</label><br />
-            <textarea name="message" rows="5" required></textarea><br /><br />
-        
-            <button type="submit">Send</button>
-        </form>
+    <header class="contact-header">
+        <div>
+            <h1>Get in touch</h1>
+        </div>
+        <div>
+          <p>For appointment booking, or just to discuss options, please reach out using the form below</p>
+        </div>
+      </header>
+    
+    <section class="contact-grid container">
+  
+      <!-- TOP ROW: Locations & Map -->
+      <div class="contact-row">
+        <div class="contact-locations">
+          <ul>
+            <li>
+              <span class="icon-location">&#x1F4CD;</span>
+              123 Example Street, City, AB1 2CD<br />
+              <strong>Tel:</strong> <a href="tel:+441234567890">01234 567 890</a><br />
+              <strong>Email:</strong> <a href="mailto:example@example.com">example@example.com</a>
+            </li>
+            <li>
+              <span class="icon-location">&#x1F4CD;</span>
+              456 Sample Lane, Town, XY1 2ZZ<br />
+              <strong>Tel:</strong> <a href="tel:+441234567891">01234 567 891</a><br />
+              <strong>Email:</strong> <a href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li>
+              <span class="icon-location">&#x1F4CD;</span>
+              789 Address Ave, Place, QW3 4ER<br />
+              <strong>Tel:</strong> <a href="tel:+441234567892">01234 567 892</a><br />
+              <strong>Email:</strong> <a href="mailto:clinic@example.com">clinic@example.com</a>
+            </li>
+            <li>
+              <span class="icon-location">&#x1F4CD;</span>
+              1011 Health Rd, Borough, RT5 6YU<br />
+              <strong>Tel:</strong> <a href="tel:+441234567893">01234 567 893</a><br />
+              <strong>Email:</strong> <a href="mailto:team@example.com">team@example.com</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19800.123456!2d-0.1415887!3d51.5014766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3333baebb9%3A0xe768f524d3dbde8f!2sLondon!5e0!3m2!1sen!2suk!4v1614163884567!5m2!1sen!2suk"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+  
+      <!-- BOTTOM ROW: Contact Form & Practice Info -->
+      <div class="contact-row">
+        <div class="contact-form">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+  
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+  
+            <label for="tel">Telephone Number</label>
+            <input type="tel" id="tel" name="tel" />
+  
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+  
+            <button type="submit" class="btn-reverse">Submit</button>
+          </form>
+        </div>
+  
+        <div class="contact-details">
+          <p><strong>Practice Telephone:</strong> <a href="tel:+441234567800">01234 567 800</a></p>
+          <p><strong>Practice Email:</strong> <a href="mailto:hello@practice.com">hello@practice.com</a></p>
+          <button class="btn-reverse">Call Now</button>
+        </div>
+      </div>
+  
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Client Name. All rights reserved.</p>
-  </footer>
+  
+      <footer class="site-footer">
+        <div class="footer-columns">
+          <!-- Services Column -->
+          <div class="footer-col">
+            <h4 class="footer-heading-underline">Treatments</h4>
+            <ul>
+              <li><a href="services.html#adhd">ADHD</a></li>
+              <li><a href="services.html#anxiety">Anxiety</a></li>
+              <li><a href="services.html#depression">Depression</a></li>
+              <li><a href="services.html#autism">Autism Spectrum</a></li>
+              <li><a href="services.html#bipolar">Bipolar Disorder</a></li>
+            </ul>
+          </div>
+      
+          <!-- Review Column -->
+          <div class="footer-col">
+            <h4 class="underline-full">★ ★ ★ ★ ★</h4>
+            <p><strong>29.08.2023</strong></p>
+            <p><em>“Dr Smith’s approach was incredibly helpful, compassionate and clear. I felt listened to and supported throughout.”</em><br><strong>~ Verified Patient</strong></p>
+          </div>
+      
+          <!-- Button Column -->
+          <div class="footer-col footer-action">
+            <a href="https://www.google.com" target="_blank" class="btn-outline">Leave a Review</a>
+          </div>
+        </div>
+      
+        <div class="footer-bar">
+          <p>&copy; 2025 <strong>Dr. John Smith</strong><br>Consultant Psychiatrist</p>
+          <p>Web Design by You - <a href="#">YourName.dev</a></p>
+        </div>
+      </footer>
 </body>
 </html>

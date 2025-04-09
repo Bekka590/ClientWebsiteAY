@@ -2,32 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="reviews.html">Patient Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="page-wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="reviews.html">Patient Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to Our Practice</h1>
-      <p>Expert, caring, and personalised consultation services.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Client Name. All rights reserved.</p>
-  </footer>
+    <!-- SERVICES GRID -->
+    <section class="services-grid">
+        <div class="services-inner">
+          <h2 class="services-heading">Services</h2>
+          <div class="grid-container">
+      
+          <div class="service-item">
+            <img src="img/service1.jpg" alt="ADHD">
+            <div class="service-title">
+              <a href="treatments/T1.html">ADHD</a>
+              <div class="underline"></div>
+            </div>
+          </div>
+      
+          <div class="service-item">
+            <img src="img/service2.jpg" alt="Anxiety">
+            <div class="service-title">
+              <a href="#">Anxiety</a>
+              <div class="underline"></div>
+            </div>
+          </div>
+      
+          <div class="service-item">
+            <img src="img/service3.jpg" alt="Behavioural Problems">
+            <div class="service-title">
+              <a href="#">Behavioural Problems</a>
+              <div class="underline"></div>
+            </div>
+          </div>
+      
+          <div class="service-item">
+            <img src="img/service4.jpg" alt="Depression">
+            <div class="service-title">
+              <a href="#">Depression</a>
+              <div class="underline"></div>
+            </div>
+          </div>
+      
+          <div class="service-item">
+            <img src="img/service5.jpg" alt="Emotional Control">
+            <div class="service-title">
+              <a href="#">Emotional Control</a>
+              <div class="underline"></div>
+            </div>
+          </div>
+      
+          <div class="service-item">
+            <img src="img/service6.jpg" alt="Child Psychiatry">
+            <div class="service-title">
+              <a href="#">Child & Adolescent Psychiatry</a>
+              <div class="underline"></div>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+      </section>
+      
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-columns">
+          <!-- Services Column -->
+          <div class="footer-col">
+            <h4 class="footer-heading-underline">Treatments</h4>
+            <ul>
+              <li><a href="services.html#adhd">ADHD</a></li>
+              <li><a href="services.html#anxiety">Anxiety</a></li>
+              <li><a href="services.html#depression">Depression</a></li>
+              <li><a href="services.html#autism">Autism Spectrum</a></li>
+              <li><a href="services.html#bipolar">Bipolar Disorder</a></li>
+            </ul>
+          </div>
+      
+          <!-- Review Column -->
+          <div class="footer-col">
+            <h4 class="underline-full">★ ★ ★ ★ ★</h4>
+            <p><strong>29.08.2023</strong></p>
+            <p><em>“Dr Smith’s approach was incredibly helpful, compassionate and clear. I felt listened to and supported throughout.”</em><br><strong>~ Verified Patient</strong></p>
+          </div>
+      
+          <!-- Button Column -->
+          <div class="footer-col footer-action">
+            <a href="https://www.google.com" target="_blank" class="btn-outline">Leave a Review</a>
+          </div>
+        </div>
+      
+        <div class="footer-bar">
+          <p>&copy; 2025 <strong>Dr. John Smith</strong><br>Consultant Psychiatrist</p>
+          <p>Web Design by You - <a href="#">YourName.dev</a></p>
+        </div>
+      </footer>
+  </div>
 </body>
 </html>

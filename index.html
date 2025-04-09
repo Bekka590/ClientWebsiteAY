@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+ <div class="page-wrapper">
   <header>
     <nav>
       <ul>
@@ -20,15 +21,66 @@
   </header>
 
   <main>
+
     <section class="hero">
-      <h1>Welcome to Our Practice</h1>
-      <p>Expert, caring, and personalised consultation services.</p>
-      <img src="img/DRland.jpg" alt="Placeholder image">
-    </section>
+        <div class="hero-overlay">
+          <h1>Welcome to Our Practice</h1>
+          <p>Expert, caring, and personalised consultation services.</p>
+        </div>
+      </section>
+
+      <section class="about-brief">
+        <h2>Dr John Smith</h2>
+        <h3>Professional Statement</h3>
+        <p>
+          Dr John Smith is a consultant psychiatrist with over 20 years of experience in adult mental health. 
+          He is passionate about delivering thoughtful, person-centred care tailored to each individual’s needs.
+        </p>
+        <p>
+          He specialises in the diagnosis and management of ADHD, autism spectrum conditions, anxiety, and mood disorders.
+          Dr Smith currently sees private patients by appointment only.
+        </p>
+      
+        <div class="about-links">
+          <a href="services.html" class="btn-link">View Services</a>
+          <a href="reviews.html" class="btn-link">Patient Reviews</a>
+        </div>
+      </section>    
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 Client Name. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <!-- Services Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading-underline">Treatments</h4>
+        <ul>
+          <li><a href="services.html#adhd">ADHD</a></li>
+          <li><a href="services.html#anxiety">Anxiety</a></li>
+          <li><a href="services.html#depression">Depression</a></li>
+          <li><a href="services.html#autism">Autism Spectrum</a></li>
+          <li><a href="services.html#bipolar">Bipolar Disorder</a></li>
+        </ul>
+      </div>
+  
+      <!-- Review Column -->
+      <div class="footer-col">
+        <h4 class="underline-full">★ ★ ★ ★ ★</h4>
+        <p><strong>29.08.2023</strong></p>
+        <p><em>“Dr Smith’s approach was incredibly helpful, compassionate and clear. I felt listened to and supported throughout.”</em><br><strong>~ Verified Patient</strong></p>
+      </div>
+  
+      <!-- Button Column -->
+      <div class="footer-col footer-action">
+        <a href="https://www.google.com" target="_blank" class="btn-outline">Leave a Review</a>
+      </div>
+    </div>
+  
+    <div class="footer-bar">
+      <p>&copy; 2025 <strong>Dr. John Smith</strong><br>Consultant Psychiatrist</p>
+      <p>Web Design by You - <a href="#">YourName.dev</a></p>
+    </div>
   </footer>
+ </div>
 </body>
 </html>
